@@ -1,0 +1,32 @@
+import * as React from 'react';
+import {  NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Toast from 'react-native-toast-message';
+
+
+import WelcomeScreen from './src/screen/auth/Welcome';
+
+const Stack = createNativeStackNavigator();function RootStack() {
+  return (
+    <Stack.Navigator
+      initialRouteName="Welcome"
+      screenOptions={{ headerShown: false }}
+    >
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      
+    </Stack.Navigator>
+  );
+}
+
+
+
+export default function App() {
+  return (
+    <>
+        <NavigationContainer>
+            <RootStack />
+            <Toast />
+        </NavigationContainer>
+    </>
+  );
+}
