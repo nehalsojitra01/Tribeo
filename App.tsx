@@ -5,14 +5,15 @@ import Toast from 'react-native-toast-message';
 
 
 import WelcomeScreen from './src/screen/auth/Welcome';
+import HomeScreen from './src/screen/auth/Home';
 
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Welcome"
+      initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen name="Home" component={WelcomeScreen} />
       
     </Stack.Navigator>
   );
