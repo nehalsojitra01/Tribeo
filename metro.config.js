@@ -24,6 +24,7 @@ const config = {
   },
   resolver: {
     assetExts: assetExts.filter(ext => ext !== 'svg'),
+    assetExts: [...assetExts, 'mp4', 'mov'],
     sourceExts: [...sourceExts, 'svg'],
   },
 };

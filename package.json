@@ -25,7 +25,8 @@
     "react-native-svg": "^15.15.1",
     "react-native-svg-transformer": "^1.5.2",
     "react-native-toast-message": "^2.3.3",
-    "react-native-vector-icons": "^10.3.0"
+    "react-native-vector-icons": "^10.3.0",
+    "react-native-video": "^6.19.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
