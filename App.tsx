@@ -10,10 +10,10 @@ import HomeScreen from './src/screen/auth/Home';
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Welcome"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="Home" component={WelcomeScreen} />
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
       
     </Stack.Navigator>
   );

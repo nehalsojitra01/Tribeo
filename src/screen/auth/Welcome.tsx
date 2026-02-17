@@ -17,7 +17,7 @@ const WelcomeScreen = () => {
     <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
     
 	<View>
-		<Text style={styles.text}>Template</Text>
+		<Text style={styles.text}>Tem</Text>
 	</View>
     
     

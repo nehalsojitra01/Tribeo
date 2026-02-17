@@ -25,7 +25,7 @@ const WelcomeScreen = () => {
     />
 	<View>
 		<Text style={styles.text}>Verify Your number</Text>
-		<Text style={styles.text}>Please enter the Code We've</Text>
+		<Text style={styles.text}>Just send to +</Text>
 	</View>
     <View style={styles.overlay}>
       <Text style={styles.textScreen}>KwaKwa</Text>
