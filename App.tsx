@@ -2,21 +2,22 @@ import * as React from 'react';
 import {  NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Toast from 'react-native-toast-message';
-
-
 import WelcomeScreen from './src/screen/auth/Welcome';
 import HomeScreen from './src/screen/auth/Home';
-import View_CourseScreen from './src/screen/auth/View_Course';
+import RegistrationStep1Screen from './src/screen/auth/RegisterStep1';
+import RegistrationStep2Screen from './src/screen/auth/RegisterStep2';
+
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Welcome"
+      initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
-      <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="View_Course" component={View_CourseScreen} />
-      
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="RegisterStep1" component={RegistrationStep1Screen} />
+      <Stack.Screen name="RegisterStep2" component={RegistrationStep2Screen} />
+     
       
     </Stack.Navigator>
   );

@@ -1,113 +1,46 @@
-import React, { useState } from 'react';
-import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions} from 'react-native';
-import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+import React from 'react';
+import { View, Text, TouchableOpacity, StatusBar } from 'react-native';
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import Video from 'react-native-video';
 import { getStyles } from './WelcomeScreen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import SupportIcon from '../../assets/images/SupportIcon.svg'
+
 const WelcomeScreen = () => {
-	const context={} as ThemeContextType;
-	const { styles, isDark } = getThemeStylesForClass(context, getStyles);
-  	return (
-		
-    <SafeAreaProvider>
-  	<SafeAreaView style={styles.container}>
-    <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-    <Text>Home</Text>
-	
-		<View style={{flexDirection:"row",justifyContent:'center'}}>
-            <SupportIcon resizeMode="contain" />
-      	</View>
-		<FontAwesome5 
-			name="blogger" 
-			size={24} 
-			color="black" 
-			
-		/>
-		<FontAwesome5 
-			name="blogger" 
-			size={24} 
-			color="black" 
-			
-		/>
-	<View style={styles.View}>
-	<FontAwesome5 
-			name="laptop-code" 
-			size={24} 
-			color="black" 
-			
-		/>
-		<FontAwesome5 
-			name="list-ul" 
-			size={24} 
-			color="black" 
-			
-		/>	
-	</View>
-	<View style={styles.view}>
-		<Text style={styles.texxt}>Welcome to kwakwa</Text>
-		<Text style={styles.texxt}>Evrything you wanted to know and more.</Text>
-    	<View style={styles.Vieww}></View>
-		<Text style={styles.Texxt}>
-			<FontAwesome5 
-			name="blogger" 
-			size={24} 
-			color="black" 
-			
-		/>New Contact (6)
-		</Text>
-	</View>
-	<View style={styles.Vieww}></View>
-    <Text style={styles.Ttext}>Demo cursor</Text>
-	<Text style={styles.texxt}>check out some example </Text>
-	<View style={styles.View}>
-		<FontAwesome5 
-			name="laptop-code" 
-			size={24} 
-			color="black" 
-			
-		/>
-		<FontAwesome5 
-			name="list-ul" 
-			size={24} 
-			color="black" 
-			
-		/>
-	</View>
-	<View style={styles.view}>
-		<Text style={styles.texxt}>Welcome to kwakwa</Text>
-		<Text style={styles.texxt}>Evrything you wanted to know and more.</Text>
-    	<View style={styles.Vieww}></View>
-		<Text style={styles.Texxt}>
-			<FontAwesome5 
-			name="blogger" 
-			size={24} 
-			color="black" 
-			
-		/>New Contact (6)</Text>
-	</View>
-	<View style={styles.wrapper}>
-    <View style={styles.activeSection}>   
-		<FontAwesome5 
-			name="home" 
-			size={24} 
-			color="black" 
-			
-		/>
-    <Text style={styles.activeText}>Home</Text>
-    </View>
-		<View style={styles.inactiveSection}>
-			<FontAwesome5 
-			name="plus-circle" 
-			size={24} 
-			color="black" 
-		/>
-        <Text style={styles.inactiveText}>Create</Text>
-    </View>
-    </View>
-  </SafeAreaView>
-</SafeAreaProvider>
-    );  
+    const context = {} as ThemeContextType;
+    const { styles } = getThemeStylesForClass(context, getStyles);
+
+    return (
+        <SafeAreaProvider>
+            <SafeAreaView style={styles.container}>
+                <StatusBar
+                    barStyle="light-content"
+                    backgroundColor="transparent"
+                    translucent
+                />
+                <Video
+                    source={require('../../assets/videos/video.mp4')}
+                    style={styles.backgroundVideo}
+                    repeat
+                    resizeMode="cover"
+                    muted
+                    ignoreSilentSwitch="obey"
+                />
+                <View style={styles.overlay}>
+                    <Text style={styles.textScreen}>KwaKwa</Text>
+                    <Text style={styles.textSize}>
+                        Courses, challenges, and memberships from the people you follow
+                    </Text>
+                    <TouchableOpacity style={styles.touchable}>
+                        <Text style={styles.buttonText}>Let's Go</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.textSize}>
+                        By tapping "Let's Go" you agree to our Terms and Privacy Policy
+                    </Text>
+                </View>
+            </SafeAreaView>
+        </SafeAreaProvider>
+    );
 };
+
 export default WelcomeScreen;

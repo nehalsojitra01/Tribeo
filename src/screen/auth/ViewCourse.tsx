@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
 import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { getStyles } from './WelcomeScreen.styles';
+import { getStyles } from './ViewCourseScreen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 import LogoImage from './../../assets/images/ad.svg'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-
-
-import Video from 'react-native-video';
-
-const WelcomeScreen = () => {
+const ViewCourseScreen = () => {
     const context={} as ThemeContextType;
     const { styles, isDark } = getThemeStylesForClass(context, getStyles);
     return (
@@ -42,4 +38,4 @@ const WelcomeScreen = () => {
     );  
 };
 
-export default WelcomeScreen;
+export default ViewCourseScreen;
