@@ -15,12 +15,33 @@ const WelcomeScreen = () => {
     <SafeAreaProvider>
   	<SafeAreaView style={styles.container}>
     <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-    
+    <Video
+      source={require('../../assets/videos/video.mp4')}
+      style={styles.backgroundVideo}
+      repeat
+      resizeMode="cover"
+      muted
+      ignoreSilentSwitch="obey"
+    />
 	<View>
-		<Text style={styles.text}>Tem</Text>
+		<Text style={styles.text}>Verify Your number</Text>
+		<Text style={styles.text}>Just send to +</Text>
 	</View>
-    
-    
+    <View style={styles.overlay}>
+      <Text style={styles.textScreen}>KwaKwa</Text>
+      <Text style={styles.Textsize}>
+        Courses, challenges, and memberships from the people you follow
+      </Text>
+
+      <TouchableOpacity style={styles.Touchable}>
+        <Text style={styles.Text}>Let's Go</Text>
+      </TouchableOpacity>
+
+      <Text style={styles.Textsize}>
+        By tapping "Let’s Go" you agree to our Terms and Privacy Policy
+      </Text>
+    </View>
+
   </SafeAreaView>
 </SafeAreaProvider>
 

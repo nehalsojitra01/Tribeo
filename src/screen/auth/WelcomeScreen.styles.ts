@@ -11,7 +11,8 @@ export const getStyles = (isDark: boolean) =>
             textAlign:"center",
             fontSize:25,
             margin:-120,
-            marginTop:130
+            marginTop:130,
+            
         },    
         TextScreen:{
             fontSize:25,    
@@ -41,6 +42,7 @@ export const getStyles = (isDark: boolean) =>
             margin:10,
             fontSize:20,
             fontFamily:"Poppins-Regular",
+            color:"#fff"
         },  
         Textsize:{
             textAlign:"center",
