@@ -5,8 +5,6 @@ import { getStyles } from './WelcomeScreen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 
-import Video from 'react-native-video';
-
 const WelcomeScreen = () => {
     const context={} as ThemeContextType;
     const { styles, isDark } = getThemeStylesForClass(context, getStyles);
