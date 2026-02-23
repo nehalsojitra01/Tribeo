@@ -25,12 +25,13 @@ export const getStyles = (isDark: boolean) =>
             textAlign: 'center',
             fontSize: 25,
             margin: -120,
-            marginTop: 130,
+            marginTop: 110,
+            fontFamily: 'Quicksand-Bold'
         },
         textScreen: {
             textAlign: 'center',
             fontSize: 30,
-            marginTop: 10,
+            marginTop: 5,
             fontFamily: 'Quicksand-Bold',
         },
         textSize: {
@@ -43,7 +44,7 @@ export const getStyles = (isDark: boolean) =>
         },
         buttonText: {
             textAlign: 'center',
-            marginTop: 12,
+            marginTop: 10,
             margin: 10,
             fontSize: 20,
             fontFamily: 'Poppins-Regular',
@@ -51,7 +52,12 @@ export const getStyles = (isDark: boolean) =>
         },
         cardText: {
             fontSize: 18,
-            marginTop: 7,
+            marginTop: 5,
+            fontFamily: 'Quicksand-Bold'
+        },
+        cardtext:{
+            fontSize: 18,
+            marginTop: 5,
         },
         cardTextLarge: {
             padding: 16,
@@ -59,6 +65,13 @@ export const getStyles = (isDark: boolean) =>
         },
         headingText: {
             fontSize: 30,
+            fontFamily: 'Quicksand-Bold'
+        },
+        Text: {
+            fontSize:30 ,
+            marginTop:-20,
+            padding:12,
+            fontFamily: 'Quicksand-Bold'
         },
 
         // ─── Buttons & Touchables ─────────────────────────────────
@@ -76,19 +89,22 @@ export const getStyles = (isDark: boolean) =>
         },
 
         // ─── Cards / Views ────────────────────────────────────────
-        card: {
-            height: 200,
-            width: 422,
-            backgroundColor: '#FFFFFF',
-            borderRadius: 15,
-            padding: 12,
-            marginTop: 12,
+        card:{      
+            flex:0.5,
+            padding:8
+        },
+        card2:{
+            flex:0.5,
+            alignItems:"flex-end",
+            padding:8
+            
         },
         cardDark: {
             height: 140,
-            width: 420,
-            backgroundColor: '#04102b',
-            marginTop: -6,
+            width: 450,
+            backgroundColor: '#071028',
+            marginTop: -1,
+            borderRadius:12
         },
         divider: {
             marginTop: 12,
@@ -103,7 +119,7 @@ export const getStyles = (isDark: boolean) =>
 
         // ─── Toggle / Segmented Control ───────────────────────────
         wrapper: {
-            marginTop: 15,
+            marginTop: -5,
             flexDirection: 'row',
             backgroundColor: '#E6E6E6',
             borderRadius: 60,
@@ -145,4 +161,15 @@ export const getStyles = (isDark: boolean) =>
         backgroundVideo: {
             ...StyleSheet.absoluteFill,
         },
+        // ─── Icon ────────────────────────────────────────────────
+        icon:{
+            flexDirection:"row",
+            alignItems:"center",
+            justifyContent: 'flex-end',
+            padding:10,
+            marginTop: -50,
+        },
+        Icon:{
+            padding:-10
+        }
     });

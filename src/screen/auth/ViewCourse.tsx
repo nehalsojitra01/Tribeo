@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { getStyles } from './ViewCourseScreen.styles';
+import { getStyles } from './View_CourseScreen .style';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 import LogoImage from './../../assets/images/ad.svg'
