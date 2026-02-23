@@ -6,18 +6,18 @@ import WelcomeScreen from './src/screen/auth/Welcome';
 import HomeScreen from './src/screen/auth/Home';
 import RegistrationStep1Screen from './src/screen/auth/RegisterStep1';
 import RegistrationStep2Screen from './src/screen/auth/RegisterStep2';
-
+import MobileScreen from './src/screen/auth/MobileScreen.tsx';
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="MobileScreen"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="RegisterStep1" component={RegistrationStep1Screen} />
       <Stack.Screen name="RegisterStep2" component={RegistrationStep2Screen} />
-     
+      <Stack.Screen name="MobileScreen" component={MobileScreen} />     
       
     </Stack.Navigator>
   );

@@ -8,7 +8,7 @@ export const getStyles = (isDark: boolean) =>
             alignItems:"center",
             marginBottom:60,
         },    
-     font:{
+        font:{
             textAlign:"center",
             marginTop:150,
             margin:10,
@@ -31,14 +31,15 @@ export const getStyles = (isDark: boolean) =>
             marginTop:12,
             margin:10,
             fontSize:20,
-            fontFamily:"Poppins-Regular",
+           fontFamily:"Quicksand-Bold",
           
         },
         txt:{
             textAlign:"center",
             margin:1,
             fontSize:20,
-            color:"#fff"
+            color:"#fff",
+             fontFamily:"Quicksand-Bold",
         },
          
           container:{

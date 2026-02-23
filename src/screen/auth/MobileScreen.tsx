@@ -82,26 +82,26 @@ const RegisterScreen = () => {
                 </View>
               </TouchableOpacity>
           <Modal
-				animationType="slide"
-				transparent={true}
-				visible={modalVisible}
-				onRequestClose={() => {
-				setModalVisible(!modalVisible);
-			}}>
-			<View style={styles.centeredView}>
-				<View style={styles.modalView}>
-					<View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end"}}>
-						
-						<View style={styles.Cancel}>
-							<Pressable onPress={() => setModalVisible(!modalVisible)}>
+                animationType="slide"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                setModalVisible(!modalVisible);
+            }}>
+            <View style={styles.centeredView}>
+                <View style={styles.modalView}>
+                    <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end"}}>
+                        
+                        <View style={styles.Cancel}>
+                            <Pressable onPress={() => setModalVisible(!modalVisible)}>
                 <View style={{justifyContent:"flex-end",alignItems:"flex-end",alignContent:"flex-end"}}>
-                    	<Text style={styles.textStyle}>cancel</Text>
+                        <Text style={styles.textStyle}>cancel</Text>
                 </View>
-							</Pressable>
-						</View>   
-					</View>
-					<View style={{}}>	
-					        <FlatList
+                            </Pressable>
+                        </View>   
+                    </View>
+                    <View style={{}}>	
+                            <FlatList
                     data={country}
                     keyExtractor={(item) => item.name}
                     renderItem={({ item }) => (
@@ -112,10 +112,10 @@ const RegisterScreen = () => {
                         />
                     )}
                   />
-					</View>			
-				</View>
-			</View>
-			</Modal>					
+                    </View>			
+                </View>
+            </View>
+            </Modal>					
         </View>
         <View style={{flex:0.7}}>
           <TextInput
