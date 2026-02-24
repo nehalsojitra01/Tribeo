@@ -156,7 +156,6 @@ export const getStyles = (isDark: boolean) =>
             marginLeft: 8,
             fontWeight: '500',
         },
-
         // ─── Video ────────────────────────────────────────────────
         backgroundVideo: {
             ...StyleSheet.absoluteFill,
@@ -171,5 +170,11 @@ export const getStyles = (isDark: boolean) =>
         },
         Icon:{
             padding:-10
-        }
+        },
+        container1: {
+            flex: 1,
+        },     
+        title: {
+            fontSize: 32,
+        },
     });
