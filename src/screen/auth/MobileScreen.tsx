@@ -1,139 +1,95 @@
 import React, { useState } from 'react';
 import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions, FlatListComponent} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { getStyles } from './RegisterStep1.styles';
+import { getStyles } from './MobileSceen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
-import LogoImage from './../../assets/images/flags/my.svg';
-import { SvgUri } from 'react-native-svg';
-import country from "./country.json";
+import TikIcon from './../../assets/images/tik.svg';
+import Arrow from './../../assets/images/arrowback.svg'
+import Leave from './../../assets/images/leave.svg'
+import TopHeader  from './../../component/TopHeader'
+import { getColorScheme } from 'react-native/types_generated/Libraries/Utilities/Appearance';
+import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
 const RegisterScreen = () => {
-  const context={} as ThemeContextType;
-  const [selected, setSelected] = useState('sms');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [modalVisible, setModalVisible] = useState(false);
-  const { styles, isDark } = getThemeStylesForClass(context, getStyles);
+    const context={} as ThemeContextType;
+    const [selected, setSelected] = useState('sms');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
+    const { styles, isDark } = getThemeStylesForClass(context, getStyles);
   
-  const Item = ({ name, code, flag }: ItemProps) => {
+    const DATA = [
+        {
+        title:"Episode 1",
+        descriptions:"Viewed",
+        Color:"#1db934",
+        },
+        {
+        title:"Episode 2",
+        descriptions:"New Content Avalible",
+        Color:"#e32d9a",
+        },
+        {    
+        title:"Episode 3",
+        descriptions:"New Content Avalible",
+        Color:"#e32d9a",
+        },
+        {
+        title:"Episode 4",
+        descriptions:"New Content Avalible",
+        Color:"#e32d9a",
+        },
+        {
+        title:"Episode 5",
+        descriptions:"New Content Avalible",
+        Color:"#e32d9a",
+        },
+    ];
 
-    return (
-      <View style={styles.item}>
+    type ItemProps = {title:string,descriptions:string};
+    const Item = ({title,descriptions,color}:ItemProps) => (
+        <View style={styles.item}>
+            <View style={{flex:0.1}}>
+                <View style={[styles.icon,{backgroundColor:color}]}>
+                     <TikIcon resizeMode="contain" style={{height:50,with:50}}/>
+                </View>
+            </View>
+            <View style={{flex:0.8,alignItems:"flex-start",}}>
+                <Text style={{fontFamily:"Quicksand-Bold",color:"#f7f7f4",fontSize:17}}>{title}</Text>
+                <View style={{alignContent:"space-evenly"}}>
+                    <Text style={{fontFamily:"Quicksand-Bold",color:"#e90c9f",fontSize:14}}>{descriptions}</Text>
+                </View>
+            </View>
+            <View style={{flex:0.1}}>
+                <Arrow resizeMode="contain" style={{height:50,with:50,Color:"#f0eded"}}/>
+            </View>
+        </View>
         
-        <View style={{ flex: 0.3 }}>
-          <SvgUri
-            width="40"
-            height="30"
-            uri={`https://flagcdn.com/${flag.toLowerCase()}.svg`}
-          />
-        </View>
-
-        <View style={{ flex: 0.3, alignItems: "center" }}>
-          <Text style={{ color: "#000" }}>{code}</Text>
-        </View>
-
-        <View style={{ flex: 0.4, alignItems: "flex-end" }}>
-          <Text style={{ color: "#000" }}>{name}</Text>
-        </View>
-
-      </View>
-    );
-  };    
-
+    )
+   
   return (   
     <SafeAreaProvider>
-    <SafeAreaView style={styles.container}>
-    <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
-    <View>
-        <Text style={styles.font}>What's your number?</Text>
-        <Text style={styles.txt}>enter Your phone number and </Text>
-        <Text style={styles.txt}>we'll send you a varification code</Text>
-    </View>
-       <View style={{ alignItems: 'center' }}>
-       <View style={{ flexDirection: "row", marginTop: 20 }}>
-          <TouchableOpacity
-              style={styles.Container}
-              onPress={() => setSelected('sms')}
-           >
-            <View style={styles.radio}>
-              {selected === 'sms' && <View style={styles.select} />}
+        <SafeAreaView style={styles.container}>
+            <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+            <TopHeader/>
+            <View style={styles.cardDark}></View>
+                <Text style={styles.Txt}>35% Complated</Text>
+                <View style={styles.cardDark1}></View>
+                <View style={styles.cardDark3}></View>
+           <FlatList
+            data={DATA}
+            renderItem={({ item }) => (
+                <Item
+                    descriptions={item.descriptions}
+                    title={item.title}
+                    color={item.Color}
+                />
+            )}
+        />    
+         <View style={styles.cardDark}></View>
+            <View style={{flexDirection:"row",padding:10}}>
+                <Leave resizeMode="contain" style={{height:50,with:50,Color:"#f0eded"}}/>
+                <Text style={styles.Next}>Leave Course </Text>
             </View>
-                <Text style={styles.option}>Use SMS</Text>
-            </TouchableOpacity>
-
-          <TouchableOpacity
-              style={[styles.Container, { marginLeft: 20 }]}
-              onPress={() => setSelected('whatsapp')}>
-            <View style={styles.radio}>
-              {selected === 'whatsapp' && <View style={styles.select} />}
-            </View>
-               <Text style={styles.option}>Use WhatsApp</Text>
-          </TouchableOpacity>
-      </View>
-        <View style={{flexDirection:"row"}}>
-           <View style={[styles.num,{flex:0.2,flexDirection:"row",justifyContent:"center",alignContent:"center"}]}>
-              <TouchableOpacity onPress={()=>setModalVisible(true)} style={{flexDirection:"row"}}>
-                <View style={{height:50,justifyContent:"center"}}>
-                    <LogoImage style={{height:15,width:40}}/>
-                </View>
-                <View style={{height:50,justifyContent:"center"}}>
-                  <View>
-                        <Text style={{color:"#fff"}}>+60</Text>
-                      </View>
-                </View>
-              </TouchableOpacity>
-          <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                setModalVisible(!modalVisible);
-            }}>
-            <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                    <View style={{flexDirection:"row",justifyContent:"center",alignItems:"flex-end"}}>
-                        
-                        <View style={styles.Cancel}>
-                            <Pressable onPress={() => setModalVisible(!modalVisible)}>
-                <View style={{justifyContent:"flex-end",alignItems:"flex-end",alignContent:"flex-end"}}>
-                        <Text style={styles.textStyle}>cancel</Text>
-                </View>
-                            </Pressable>
-                        </View>   
-                    </View>
-                    <View style={{}}>	
-                            <FlatList
-                    data={country}
-                    keyExtractor={(item) => item.name}
-                    renderItem={({ item }) => (
-                        <Item
-                            name={item.name}
-                            code={item.dial_code}
-                            flag={item.code}
-                        />
-                    )}
-                  />
-                    </View>			
-                </View>
-            </View>
-            </Modal>					
-        </View>
-        <View style={{flex:0.7}}>
-          <TextInput
-            style={styles.number}
-            placeholder="Phone Number"
-            placeholderTextColor="#e9e2e2"
-            keyboardType="phone-pad"
-            value={phoneNumber}
-            onChangeText={setPhoneNumber}
-          />
-        </View>
-      </View>
-    </View>
-       <View>
-          <TouchableOpacity style={styles.Touchable}>
-             <Text style={styles.Text}>Next</Text>
-          </TouchableOpacity>
-       </View>
   </SafeAreaView>
 </SafeAreaProvider>
     );  
