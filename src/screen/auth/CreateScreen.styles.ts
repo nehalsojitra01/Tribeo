@@ -11,46 +11,54 @@ export const getStyles = (isDark: boolean) =>
             justifyContent: 'center',
             alignContent: 'center',
             alignItems: 'center',
+            color:"#fff"
         },
         divider: {
             marginTop: 10,
             height: 2,
-            backgroundColor: '#373737',
+            backgroundColor: '#222020',
         },
         divider1: {
             marginTop: 8,
             height: 1,
-            backgroundColor: '#373737',
+            backgroundColor: '#222020',
         },
         Text: {
             fontSize:32 ,
             marginTop:-10,
             padding:12,
-            fontFamily: 'Quicksand-Bold'
+            fontFamily: 'Quicksand-Bold',
+            color:"#fff"
+
         },
         text:{
             fontSize:20,
             padding:10,
-            marginTop:-10
+            marginTop:-10,
+            color:"#fff"
         },
         textt:{
             fontSize:16,
-            padding:5,marginTop:-12
+            padding:5,
+            marginTop:-12,
+            color:"#fff",
+            
         },
         textsize:{
             fontSize:20,
-            padding:10
+            padding:10,
+            color:"#fff"
         },
         Text1:{
 
         },
-        // ─── Icon ────────────────────────────────────────────────
         icon:{
             flexDirection:"row",
             alignItems:"center",
             justifyContent: 'flex-end',
             padding:10,
             marginTop: -58,
+            color:"#fff"
         },
         Icon:{
             marginTop:12,
@@ -66,7 +74,8 @@ export const getStyles = (isDark: boolean) =>
             height:45,
             width:45,
             alignItems:"center",
-            justifyContent:"center"
+            justifyContent:"center",
+            color:"#fff"
         },
         Icon2:{
             backgroundColor:'#35bfff',
@@ -74,7 +83,9 @@ export const getStyles = (isDark: boolean) =>
             height:45,
             width:45,
             alignItems:"center",
-            justifyContent:"center"
+            justifyContent:"center",
+            color:"#fff",
+            padding:10
         },
         Icon3:{
             backgroundColor:'#f87c08',
@@ -82,7 +93,8 @@ export const getStyles = (isDark: boolean) =>
             height:45,
             width:45,
             alignItems:"center",
-            justifyContent:"center"
+            justifyContent:"center",
+            color:"#fff"
         },
         backIcon:{
             alignItems:"flex-end",
@@ -121,7 +133,7 @@ export const getStyles = (isDark: boolean) =>
             fontWeight: '600',
         },
         inactiveText: {
-            color: '#000',
+            color: '#fff9f9',
             fontSize: 22,
             marginLeft: 10,
             fontWeight: '500',
