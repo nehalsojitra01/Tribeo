@@ -11,7 +11,7 @@ import CreateCourse from './src/screen/auth/CreateCourse.tsx';
 import MobileScreen from './src/screen/auth/MobileScreen.tsx';
 import CreateScreen from './src/screen/auth/Create.tsx';
 import MobilCreateScreen from './src/screen/auth/MobilCreate.tsx'
-import SedulingScreen from './src/screen/auth/Sceduling.tsx'
+import SedulingScreen from './src/screen/auth/Scheduling.tsx'
 import Contentmanager from './src/screen/auth/Contentmanager.tsx'
 import PricingScreen from './src/screen/auth/Pricing.tsx'
 const Stack = createNativeStackNavigator();function RootStack() {
@@ -28,7 +28,7 @@ const Stack = createNativeStackNavigator();function RootStack() {
       <Stack.Screen name="MobileScreen" component={MobileScreen} />
       <Stack.Screen name="Create" component={CreateScreen} /> 
       <Stack.Screen name="MobilCreate" component={MobilCreateScreen} />
-      <Stack.Screen name="Seduling" component={SedulingScreen} />  
+      <Stack.Screen name="Scheduling" component={SedulingScreen} />  
       <Stack.Screen name="Contentmanager" component={Contentmanager}/>
       
     </Stack.Navigator>
