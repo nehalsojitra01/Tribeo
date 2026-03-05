@@ -8,10 +8,13 @@ import RegistrationStep1Screen from './src/screen/auth/RegisterStep1';
 import RegistrationStep2Screen from './src/screen/auth/RegisterStep2';
 import MobileScreen from './src/screen/auth/MobileScreen.tsx';
 import CreateScreen from './src/screen/auth/Create.tsx';
+import MobilCreateScreen from './src/screen/auth/MobilCreate.tsx'
+import SedulingScreen from './src/screen/auth/Seduling.tsx'
+import Contentmanager from './src/screen/auth/Contentmanager.tsx'
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Create"
+      initialRouteName="Contentmanager"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
@@ -19,7 +22,10 @@ const Stack = createNativeStackNavigator();function RootStack() {
       <Stack.Screen name="RegisterStep1" component={RegistrationStep1Screen} />
       <Stack.Screen name="RegisterStep2" component={RegistrationStep2Screen} />
       <Stack.Screen name="MobileScreen" component={MobileScreen} />
-      <Stack.Screen name="Create" component={CreateScreen} />     
+      <Stack.Screen name="Create" component={CreateScreen} /> 
+      <Stack.Screen name="MobilCreate" component={MobilCreateScreen} />
+      <Stack.Screen name="Seduling" component={SedulingScreen} />  
+      <Stack.Screen name="Contentmanager" component={Contentmanager}/>
       
     </Stack.Navigator>
   );
