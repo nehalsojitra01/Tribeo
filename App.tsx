@@ -30,6 +30,9 @@ const Stack = createNativeStackNavigator();function RootStack() {
       <Stack.Screen name="MobilCreate" component={MobilCreateScreen} />
       <Stack.Screen name="Scheduling" component={SedulingScreen} />  
       <Stack.Screen name="Contentmanager" component={Contentmanager}/>
+      <Stack.Screen name="CourseManager" component={CourseManager}/>
+      <Stack.Screen name="CreateCourse" component={CreateCourse}/>
+
       
     </Stack.Navigator>
   );
