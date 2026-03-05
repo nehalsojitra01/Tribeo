@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import {Button, ImageBackground, StyleSheet, Text, View,Image, Pressable, TurboModuleRegistry, Modal, FlatList, useWindowDimensions, Touchable, TouchableOpacity, StatusBar} from 'react-native';
 import BackIcon from './../assets/images/back.svg';
-import Notificationn from './../assets/images/notificationn.svg';
-import { getStyles } from './../screen/auth/MobileSceen.styles';
+import Notificationn from './../assets/images/Course.svg';
+import { getStyles } from './../screen/auth/CreateCourse.styles';
 import { getThemeStylesForClass } from '../helpers/themeHelper';
 import { ThemeContextType } from './ThemeContext';
-const TopHeader = () => {
+const TopHeader = ({title}) => {
     const context={} as ThemeContextType;
     const { styles, isDark } = getThemeStylesForClass(context, getStyles);
     return (
@@ -16,7 +16,7 @@ const TopHeader = () => {
                 </TouchableOpacity>
             </View>
             <View style={styles.font}>
-                <Text style={{fontSize:25,color:"#fff"}}>Course Name</Text>
+                <Text style={{fontSize:25,color:"#fff"}}>{title}</Text>
                   
             </View>
             <View style={styles.Icon}>

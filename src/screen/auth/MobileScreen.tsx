@@ -5,7 +5,7 @@ import { getStyles } from './MobileSceen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 import TikIcon from './../../assets/images/tik.svg';
-import Arrow from './../../assets/images/arrowback.svg'
+
 import Leave from './../../assets/images/leave.svg'
 import TopHeader  from './../../component/TopHeader'
 import { getColorScheme } from 'react-native/types_generated/Libraries/Utilities/Appearance';
@@ -59,9 +59,7 @@ const RegisterScreen = () => {
                     <Text style={{fontFamily:"Quicksand-Bold",color:"#e90c9f",fontSize:14}}>{descriptions}</Text>
                 </View>
             </View>
-            <View style={{flex:0.1}}>
-                <Arrow resizeMode="contain" style={{height:50,with:50,Color:"#f0eded"}}/>
-            </View>
+            
         </View>
         
     )

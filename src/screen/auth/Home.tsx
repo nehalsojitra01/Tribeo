@@ -102,12 +102,11 @@ const Item = ({}: ItemProps) => (
                     </View>
                     <View style={styles.inactiveSection}>
                         <TouchableOpacity>
-                            <FontAwesome5 name="plus-circle" size={24} color="black" />
+                           <FontAwesome5 name="plus-circle" size={24} color="black" />
                         </TouchableOpacity>
                         <Text style={styles.inactiveText}>Create</Text>
                     </View>
                 </View>
-                
             </SafeAreaView>
         </SafeAreaProvider>
     );
