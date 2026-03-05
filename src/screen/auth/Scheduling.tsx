@@ -1,26 +1,20 @@
 import React, { useState } from 'react';
 import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions, FlatListComponent,Platform,} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { getStyles } from './SedulingScreen.styles';
+import { getStyles } from './SchedulingScreen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import TikIcon from './../../assets/images/tik.svg';
 import Arrow from './../../assets/images/arrowback.svg'
-import Leave from './../../assets/images/leave.svg'
-import TopHeader  from './../../component/TopHeader'
-import { getColorScheme } from 'react-native/types_generated/Libraries/Utilities/Appearance';
-import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
-const RegisterScreen = () => {
+import TopHeader  from '../../component/TopHeader'
+const SchedulingScreen = () => {
     const context={} as ThemeContextType;
-    const [selected, setSelected] = useState('sms');
-    const [phoneNumber, setPhoneNumber] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const { styles, isDark } = getThemeStylesForClass(context, getStyles);
 
-const [date, setDate] = useState(new Date());
-const [mode, setMode] = useState('date');
-const [show, setShow] = useState(false);
+    const [date, setDate] = useState(new Date());
+    const [mode, setMode] = useState('date');
+    const [show, setShow] = useState(false);
 
 const onChange = (event, selectedDate) => {
   const currentDate = selectedDate || date;
@@ -135,7 +129,7 @@ const showMode = (currentMode) => {
     );  
 };
 
-export default RegisterScreen;
+export default SchedulingScreen;
 const modalStyles = StyleSheet.create({
   centeredView: {
     flex: 1,

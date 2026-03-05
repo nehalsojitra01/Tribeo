@@ -11,7 +11,7 @@ import CreateCourse from './src/screen/auth/CreateCourse.tsx';
 import MobileScreen from './src/screen/auth/MobileScreen.tsx';
 import CreateScreen from './src/screen/auth/Create.tsx';
 import MobilCreateScreen from './src/screen/auth/MobilCreate.tsx'
-import SedulingScreen from './src/screen/auth/Seduling.tsx'
+import SedulingScreen from './src/screen/auth/Sceduling.tsx'
 import Contentmanager from './src/screen/auth/Contentmanager.tsx'
 import PricingScreen from './src/screen/auth/Pricing.tsx'
 const Stack = createNativeStackNavigator();function RootStack() {
