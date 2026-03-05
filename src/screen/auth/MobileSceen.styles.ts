@@ -28,10 +28,9 @@ export const getStyles = (isDark: boolean) =>
           flex:1,
           backgroundColor: 'black'
         },
-
         title: {
             fontSize: 20,
-             },
+        },
          Icon:{
           flex:0.1,
           justifyContent:"center",

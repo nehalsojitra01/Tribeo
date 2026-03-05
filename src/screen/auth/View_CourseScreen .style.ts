@@ -12,6 +12,7 @@ export const getStyles = (isDark: boolean) =>
         {
             width:12,
             height:12
-        }
+        },
+        
         
 });
