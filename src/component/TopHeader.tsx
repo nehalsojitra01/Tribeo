@@ -22,7 +22,7 @@ const TopHeader = ({title}) => {
             <View style={styles.Icon}>
                 <TouchableOpacity>
                     <Notificationn resizeMode="contain" style={{height:50,width:50}}/>
-                 </TouchableOpacity>
+                </TouchableOpacity>
             </View>
         </View>		
     );

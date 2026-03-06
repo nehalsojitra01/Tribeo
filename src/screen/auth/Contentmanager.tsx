@@ -8,7 +8,8 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import TopHeader  from './../../component/TopHeader'
 import Pluse from '../../assets/images/pluse.svg'
 import Arrow from '../../assets/images/Arrow.svg'
-import Eye from '../../assets/images/Eye.svg'
+import Eye from '../../assets/images/eye.svg'
+import Stars from '../../assets/images/stars.svg'
 import { getColorScheme } from 'react-native/types_generated/Libraries/Utilities/Appearance';
 import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
 const RegisterScreen = () => {
@@ -28,9 +29,13 @@ const RegisterScreen = () => {
                         <View style={{flexDirection:"row",justifyContent:"center"}}>
                             <View style={styles.View}>
                                 <View style={{flex:0.1}}>
-                                    <TouchableOpacity>
-                                        <Pluse name="laptop-code" color="black" />
-                                    </TouchableOpacity>
+                                    <Pressable
+                                        style={[modalStyles.button, modalStyles.buttonClose]}
+                                        onPress={() => setModalVisible(true)}>
+                                        <TouchableOpacity>
+                                            <Pluse name="laptop-code" color="black" />
+                                        </TouchableOpacity>
+                                    </Pressable>
                                 </View>
                             </View>
                         </View>
@@ -46,23 +51,24 @@ const RegisterScreen = () => {
                         </View>
                     </View>  
 
-                    <Modal
+                <Modal
                     animationType="slide"
                     transparent={true}
                     visible={modalVisible}
                     onRequestClose={() => {
                     Alert.alert('Modal has been closed.');
                     setModalVisible(!modalVisible);
-                }}>
-
+                    }}>
                 </Modal>
                 
-                <View style={{flexDirection:"row",justifyContent:"center"}}>
-                   
+                <View style={{flexDirection:"row",justifyContent:"center",flex:1}}>
+                    <View style={{ flex: 1, justifyContent: "flex-end" }}> 
                     <TouchableOpacity style={styles.Touchable}>
                         <View style={{flex:0.3}}>
                             <View style={styles.Eye}>
-                                <Eye resizeMode="contain" />            
+                                <TouchableOpacity>
+                                    <Eye resizeMode="contain" /> 
+                                </TouchableOpacity>           
                             </View>
                         </View> 
                         <View style={{flex:0.7}}>
@@ -70,8 +76,47 @@ const RegisterScreen = () => {
                         </View>
                     </TouchableOpacity>
                     </View>
+                </View>
 
-                
+                    <View style={styles.card2}>
+                    <View style={{height:2,width:2,backgroundColor:'black'}}></View>
+                        <Modal
+                            animationType="slide"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                            Alert.alert('Modal has been closed.');
+                            setModalVisible(!modalVisible);
+                            }}>
+                            <View style={modalStyles.centeredView}>
+                                <View style={modalStyles.modalView}>
+                                    <View style={{flexDirection:"row"}}>
+                                        <View style={{flex:0.5,justifyContent:"flex-start"}}>
+                                            <Text style={styles.Text1}>Content Name</Text>
+                                        </View>
+                                        <View style={{flex:0.5,justifyContent:"flex-end",flexDirection:"row"}}>
+                                            <View style={[styles.icon,]}>
+                                                <Stars resizeMode="contain" style={{height:100,with:100}}/>
+                                            </View>
+                                            <Text style={styles.Text2}>Generate</Text>
+                                        </View>
+                                    </View>
+                                    <View style={styles.View2}>
+                                        <Text style={styles.View1}>i.e the first episode</Text>
+                                    </View>     
+                                        <View style={styles.View3}>
+                                            <TouchableOpacity style={styles.cancelBtn}>
+                                            <Text style={styles.text}>Cancel</Text>
+                                            </TouchableOpacity>
+
+                                            <TouchableOpacity style={styles.createBtn}>
+                                            <Text style={styles.text}>Create</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                </View>
+                            </View>
+                        </Modal>         
+                    </View>  
         </SafeAreaView>
     </SafeAreaProvider>
     );  
@@ -93,8 +138,8 @@ const modalStyles = StyleSheet.create({
     alignItems: 'center',
     shadowColor: '#0f0f0f',
     shadowOffset: {
-      width: 0,
-      height: 2,
+      width: 6,
+      height: 4,
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
@@ -117,18 +162,18 @@ const modalStyles = StyleSheet.create({
   },
   button: {
     borderRadius: 5,
-    padding: 5,    
+    padding: 6,    
 
   },
   buttonOpen: {
     backgroundColor: '#F194FF',
   },
   buttonClose: {
-    backgroundColor: '#161515',
-    width:40,
-    height:40,
-    padding:7,
-    borderRadius:30
+    backgroundColor: '#2f2f2f',
+    fontSize:12,
+    padding:5,
+    borderRadius:30,
+    height:35
   },
   buttonClose1: {
     backgroundColor: '#486ffd',

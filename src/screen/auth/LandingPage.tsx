@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import {Button, StyleSheet, Text, TextInput,View,Image, ScrollView, useWindowDimensions, TouchableOpacity, Modal, Alert, Pressable, FlatList, StatusBar, Touchable, ImageBackground, Dimensions, FlatListComponent} from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
-import { getStyles } from './MobileSceen.styles';
+import { getStyles } from './LandingPageScreen.styles';
 import { getThemeStylesForClass } from '../../helpers/themeHelper';
 import { ThemeContextType } from '../../component/ThemeContext';
 import TikIcon from './../../assets/images/tik.svg';
-import Leave from './../../assets/images/leave.svg'
+
 import TopHeader  from './../../component/TopHeader'
 import { getColorScheme } from 'react-native/types_generated/Libraries/Utilities/Appearance';
 import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedExports';
@@ -69,9 +69,7 @@ const RegisterScreen = () => {
             <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
             <TopHeader/>
             <View style={styles.cardDark}></View>
-                <Text style={styles.Txt}>35% Complated</Text>
-                <View style={styles.cardDark1}></View>
-                <View style={styles.cardDark3}></View>
+                
            <FlatList
             data={DATA}
             renderItem={({ item }) => (
@@ -83,10 +81,7 @@ const RegisterScreen = () => {
             )}
         />    
          <View style={styles.cardDark}></View>
-            <View style={{flexDirection:"row",padding:10}}>
-                <Leave resizeMode="contain" style={{height:50,with:50,Color:"#f0eded"}}/>
-                <Text style={styles.Next}>Leave Course </Text>
-            </View>
+            
   </SafeAreaView>
 </SafeAreaProvider>
     );  
