@@ -22,7 +22,7 @@ const Stack = createNativeStackNavigator();function RootStack() {
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
-       <Stack.Screen name="PricingScreen" component={PricingScreen} />
+      <Stack.Screen name="PricingScreen" component={PricingScreen} />
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="RegisterStep1" component={RegistrationStep1Screen} />
       <Stack.Screen name="RegisterStep2" component={RegistrationStep2Screen} />
@@ -39,8 +39,6 @@ const Stack = createNativeStackNavigator();function RootStack() {
     </Stack.Navigator>
   );
 }
-
-
 
 export default function App() {
   return (

@@ -14,7 +14,7 @@ import Userss from '../../assets/images/Userss.svg'
 import Pluse from '../../assets/images/pluse.svg'
 import Arrow from '../../assets/images/Arrow.svg'
 import Setting from '../../assets/images/setting.svg'
-import Eye from '../../assets/images/Eye.svg'
+import Eye from '../../assets/images/eye.svg'
 import Delete from '../../assets/images/delete.svg'
 import Copy from '../../assets/images/Copy.svg'
 import CalenderIcon from '../../assets/images/Calendar.svg';
@@ -92,8 +92,7 @@ const Item = ({}: ItemProps) => (
                             <TouchableOpacity>
                                 <Arrow resizeMode="contain" style={{height:50,width:50}}/>
                             </TouchableOpacity>
-                        </View>
-                    
+                        </View>    
                 </View>  
                 <View style={{flexDirection:"row",height:200,backgroundColor:"#fff",borderRadius:15,marginTop:12}}>  
                     <View style={styles.card}>
