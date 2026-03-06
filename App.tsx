@@ -14,10 +14,11 @@ import MobilCreateScreen from './src/screen/auth/MobilCreate.tsx'
 import SedulingScreen from './src/screen/auth/Scheduling.tsx'
 import Contentmanager from './src/screen/auth/Contentmanager.tsx'
 import PricingScreen from './src/screen/auth/Pricing.tsx'
+import Content from './src/screen/auth/Content.tsx'
 const Stack = createNativeStackNavigator();function RootStack() {
   return (
     <Stack.Navigator
-      initialRouteName="PricingScreen"
+      initialRouteName="Content"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
@@ -32,6 +33,7 @@ const Stack = createNativeStackNavigator();function RootStack() {
       <Stack.Screen name="Contentmanager" component={Contentmanager}/>
       <Stack.Screen name="CourseManager" component={CourseManager}/>
       <Stack.Screen name="CreateCourse" component={CreateCourse}/>
+       <Stack.Screen name="Content" component={Content}/>
 
       
     </Stack.Navigator>

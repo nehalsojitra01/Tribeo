@@ -2,7 +2,7 @@ import { StyleSheet, Touchable, useWindowDimensions } from 'react-native';
 
 export const getStyles = (isDark: boolean) =>
     StyleSheet.create({
-        PricingContainer:{
+        ContentContainer:{
             justifyContent:"center",
             alignContent:"center",
             alignItems:"center",
